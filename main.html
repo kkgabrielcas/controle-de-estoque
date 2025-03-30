@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <script src="js/register.js"></script> 
+</head>
+<body>
+
+    <div class="titulo">
+        <img src="img/icon.png" alt="Ícone Estoque" class="icone">
+        CONTROLE DE ESTOQUE
+    </div>
+
+    <div class="frame"></div>
+
+    <div class="exit">
+        <a href="login.html">Sair</a>
+    </div>
+
+    <div id="modalContainer"></div>
+
+    <div class="pag">
+        <h2>Mercadorias</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>000001</td>
+                    <td>TV 32"</td>
+                    <td>R$1200,00</td>
+                    <td>10</td>
+                    <td>
+                        <button class="btn btn-delete">Excluir</button>
+                        <button class="btn btn-edit">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>    
+        
+        <button class="btn btn-add" onclick="abrirModal()">Cadastrar Mercadoria</button>
+    </div>
+</body>
+</html>
