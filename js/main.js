@@ -1,4 +1,4 @@
-import { supabase } from './js/supabaseClient.js';
+import {supabase} from './js/supabaseClient.js';
 
 async function carregarProduto() {
     const { data, error } = await supabase

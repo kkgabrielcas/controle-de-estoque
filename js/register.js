@@ -1,5 +1,3 @@
-import {supabase} from './js/supabaseClient.js';
-
 function abrirModal() {
     if (document.getElementById("modal")) return;
 
@@ -37,41 +35,10 @@ function abrirModal() {
 
     document.getElementById("modalContainer").appendChild(modalHtml);
     modalHtml.style.display = "flex";
-
-    document.getElementById("produtoForm").addEventListener("submit", salvarProduto);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".btn-add").addEventListener("click", abrirModal);
-});
 
 function fecharModal() {
     let modal = document.getElementById("modal");
     if (modal) modal.remove();
 }
-
-async function salvarProduto(event) {
-    event.preventDefault(); 
-
-    
-    const codigo = document.getElementById("codigoProduto").value;
-    const nome = document.getElementById("nomeProduto").value;
-    const preco = parseFloat(document.getElementById("precoProduto").value);
-    const quantidade = parseInt(document.getElementById("quantidadeProduto").value);
-
-    
-    const { data, error } = await supabase
-        .from("produtos")
-        .insert([{ codigo, nome, preco, quantidade }]);
-
-    if (error) {
-        console.error("Erro ao salvar produto:", error);
-        alert("Erro ao salvar produto!");
-    } else {
-        console.log("Produto salvo com sucesso:", data);
-        alert("Produto cadastrado com sucesso!");
-        fecharModal(); 
-    }
-}
-
-window.abrirModal = abrirModal;
