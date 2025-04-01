@@ -10,14 +10,6 @@ async function carregarProduto() {
         .from('produtos') 
         .select('*');
 
-    if (error) {
-        console.error('Erro ao buscar dados:', error);
-        document.body.innerHTML += `<p style="color: red;">Erro ao carregar produtos: ${error.message}</p>`;
-        return;
-    }
-
-    console.log('Dados recebidos:', data); // Verifica se os dados estão vindo corretamente
-
     const tbody = document.querySelector('tbody');
     tbody.innerHTML = ''; 
 
