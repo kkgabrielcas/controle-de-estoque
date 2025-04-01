@@ -1,4 +1,4 @@
-import { supabase } from './supabaseClient.js';
+import {supabase} from './supabaseClient.js';
 
 function abrirModal() {
     if (document.getElementById("modal")) return;
@@ -10,10 +10,10 @@ function abrirModal() {
         <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
             <h2>Cadastrar Mercadoria</h2>
-            <form>
+            <form id="produtoForm">
                 <div class="form-group">
                     <label for="codigoProduto">Código</label>
-                    <input type="number" id="Código" required>
+                    <input type="number" id="codigoProduto" required>
                 </div>
 
                 <div class="form-group">
@@ -49,25 +49,23 @@ function fecharModal() {
 async function salvarProduto(event) {
     event.preventDefault(); 
 
+    
     const codigo = document.getElementById("codigoProduto").value;
     const nome = document.getElementById("nomeProduto").value;
     const preco = parseFloat(document.getElementById("precoProduto").value);
     const quantidade = parseInt(document.getElementById("quantidadeProduto").value);
 
-    if (codigo.length !== 4) {
-        alert("O código deve ter exatamente 4 caracteres.");
-        return;
-    }
-
+    
     const { data, error } = await supabase
         .from("produtos")
         .insert([{ codigo, nome, preco, quantidade }]);
 
     if (error) {
-        alert("Erro ao salvar produto, tente novamente.");
+        console.error("Erro ao salvar produto:", error);
+        alert("Erro ao salvar produto!");
     } else {
-        alert("Produto cadastrado com sucesso.");
-        fecharModal();
-        carregarProduto();
+        console.log("Produto salvo com sucesso:", data);
+        alert("Produto cadastrado com sucesso!");
+        fecharModal(); 
     }
 }
