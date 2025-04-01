@@ -1,3 +1,5 @@
+import {supabase} from './supabaseClient.js';
+
 function abrirModal() {
     if (document.getElementById("modal")) return;
 
@@ -35,10 +37,41 @@ function abrirModal() {
 
     document.getElementById("modalContainer").appendChild(modalHtml);
     modalHtml.style.display = "flex";
-}
 
+    document.getElementById("produtoForm").addEventListener("submit", salvarProduto);
+}
 
 function fecharModal() {
     let modal = document.getElementById("modal");
     if (modal) modal.remove();
 }
+
+async function salvarProduto(event) {
+    event.preventDefault(); 
+
+    const codigo = document.getElementById("codigoProduto").value;
+    const nome = document.getElementById("nomeProduto").value;
+    const preco = parseFloat(document.getElementById("precoProduto").value);
+    const quantidade = parseInt(document.getElementById("quantidadeProduto").value);
+
+    if (codigo.length !== 4) {
+        alert("O código deve ter exatamente 4 caracteres.");
+        return;
+    }
+
+    const { data, error } = await supabase
+        .from("produtos")
+        .insert([{ codigo, nome, preco, quantidade }]);
+
+    if (error) {
+        console.error("Erro ao salvar produto:", error);
+        alert("Erro ao salvar produto, tente novamente.");
+    } else {
+        console.log("Produto salvo com sucesso:", data);
+        alert("Produto cadastrado com sucesso!");
+        fecharModal();
+        carregarProduto();
+    }
+}
+
+window.abrirModal = abrirModal;
