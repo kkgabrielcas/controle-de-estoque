@@ -1,4 +1,4 @@
-import {supabase} from './supabaseClient.js';
+import {supabase} from './js/supabaseClient.js';
 
 function abrirModal() {
     if (document.getElementById("modal")) return;
@@ -69,3 +69,5 @@ async function salvarProduto(event) {
         fecharModal(); 
     }
 }
+
+window.abrirModal = abrirModal;
