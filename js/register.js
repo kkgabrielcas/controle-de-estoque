@@ -41,6 +41,10 @@ function abrirModal() {
     document.getElementById("produtoForm").addEventListener("submit", salvarProduto);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".btn-add").addEventListener("click", abrirModal);
+});
+
 function fecharModal() {
     let modal = document.getElementById("modal");
     if (modal) modal.remove();
