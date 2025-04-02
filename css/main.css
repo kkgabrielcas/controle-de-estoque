@@ -46,6 +46,7 @@ body {
 .exit a {
     text-decoration: none;
     text-transform: uppercase;
+    color: rgb(185, 185, 185);
 }
 
 .exit a:visited {
