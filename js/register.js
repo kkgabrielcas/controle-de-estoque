@@ -74,4 +74,5 @@ async function salvarProduto(event) {
     }
 }
 
+window.fecharModal = fecharModal;
 window.abrirModal = abrirModal;
