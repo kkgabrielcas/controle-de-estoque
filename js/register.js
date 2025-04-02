@@ -40,6 +40,17 @@ function abrirModal() {
 
     document.getElementById("produtoForm").addEventListener("submit", salvarProduto);
     
+    document.addEventListener('DOMContentLoaded', () => {
+        const codigoInput = document.getElementById('codigoProduto');
+    
+        codigoInput.addEventListener('input', () => {
+            codigoInput.value = codigoInput.value.replace(/\D/g, '');
+    
+            if (codigoInput.value.length > 4) {
+                codigoInput.value = codigoInput.value.slice(0, 4);
+            }
+        });
+    });
 }
 
 function fecharModal() {
@@ -74,18 +85,6 @@ async function salvarProduto(event) {
         carregarProduto();
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const codigoInput = document.getElementById('codigoProduto');
-
-    codigoInput.addEventListener('input', () => {
-        codigoInput.value = codigoInput.value.replace(/\D/g, '');
-
-        if (codigoInput.value.length > 4) {
-            codigoInput.value = codigoInput.value.slice(0, 4);
-        }
-    });
-});
 
 window.fecharModal = fecharModal;
 window.abrirModal = abrirModal;
