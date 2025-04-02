@@ -13,7 +13,7 @@ function abrirModal() {
             <form id="produtoForm">
                 <div class="form-group">
                     <label for="codigoProduto">Código</label>
-                    <input type="number" id="codigoProduto" required maxlenght="4">
+                    <input type="number" id="codigoProduto" required maxlength="4">
                 </div>
 
                 <div class="form-group">
