@@ -13,7 +13,7 @@ function abrirModal() {
             <form id="produtoForm">
                 <div class="form-group">
                     <label for="codigoProduto">Código</label>
-                    <input type="number" id="codigoProduto" required maxlength="4">
+                    <input type="number" id="codigoProduto" required maxlenght="4">
                 </div>
 
                 <div class="form-group">
@@ -39,6 +39,7 @@ function abrirModal() {
     modalHtml.style.display = "flex";
 
     document.getElementById("produtoForm").addEventListener("submit", salvarProduto);
+    
 }
 
 function fecharModal() {
@@ -65,7 +66,7 @@ async function salvarProduto(event) {
 
     if (error) {
         console.error("Erro ao salvar produto:", error);
-        alert("Erro ao salvar produto, tente novamente.");
+        alert("Erro ao salvar produto, tente novamente.");;
     } else {
         console.log("Produto salvo com sucesso:", data);
         alert("Produto cadastrado com sucesso!");
@@ -73,6 +74,18 @@ async function salvarProduto(event) {
         carregarProduto();
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const codigoInput = document.getElementById('codigoProduto');
+
+    codigoInput.addEventListener('input', () => {
+        codigoInput.value = codigoInput.value.replace(/\D/g, '');
+
+        if (codigoInput.value.length > 4) {
+            codigoInput.value = codigoInput.value.slice(0, 4);
+        }
+    });
+});
 
 window.fecharModal = fecharModal;
 window.abrirModal = abrirModal;
