@@ -58,6 +58,10 @@ function fecharModal() {
     if (modal) modal.remove();
 }
 
+function carregarProduto() {
+    location.reload();
+}
+
 async function salvarProduto(event) {
     event.preventDefault(); 
 
@@ -86,5 +90,6 @@ async function salvarProduto(event) {
     }
 }
 
+window.carregarProduto = carregarProduto;
 window.fecharModal = fecharModal;
 window.abrirModal = abrirModal;
