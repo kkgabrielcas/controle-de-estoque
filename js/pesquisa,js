@@ -1,18 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
+function ativarFiltroDeBusca() {
     const inputPesquisa = document.getElementById("searchInput");
+
+    if (!inputPesquisa) return;
 
     inputPesquisa.addEventListener("input", function () {
         const filtro = this.value.toLowerCase();
         const linhas = document.querySelectorAll("table tbody tr");
 
         linhas.forEach(linha => {
-            const descricao = linha.children[1].textContent.toLowerCase();
+            const texto = linha.innerText.toLowerCase();
 
-            if (descricao.includes(filtro)) {
+            if (texto.includes(filtro)) {
                 linha.style.display = "";
             } else {
                 linha.style.display = "none";
             }
         });
     });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(ativarFiltroDeBusca, 500);
 });
