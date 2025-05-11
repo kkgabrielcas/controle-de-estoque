@@ -90,6 +90,6 @@ async function salvarProduto(event) {
     }
 }
 
-window.carregarProduto = carregarProduto;
 window.fecharModal = fecharModal;
 window.abrirModal = abrirModal;
+window.carregarProduto = carregarProduto;
