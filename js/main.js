@@ -15,7 +15,10 @@ async function carregarProduto() {
             <td>${produto.nome}</td>
             <td>R$${produto.preco.toFixed(2)}</td>
             <td>${produto.quantidade}</td>
-
+            <td>
+                <button class="btn btn-delete">Excluir</button>
+                <button class="btn btn-edit">Editar</button>
+            </td>
         `;
         tbody.appendChild(tr);
     });
