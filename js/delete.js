@@ -1,43 +1,33 @@
-function abrirModal() {
-    if (document.getElementById("modal")) return;
+import { supabase } from './supabaseClient.js';
 
-    let modalHtml = document.createElement("div");
-    modalHtml.id = "modal";
-    modalHtml.className = "modal";
-    modalHtml.innerHTML = `
-        <div class="modal-content">
-            <span class="close" onclick="fecharModal()">&times;</span>
-            <h2>Cadastrar Mercadoria</h2>
-            <form>
-                <div class="form-group">
-                    <label for="codigoProduto">Código</label>
-                    <input type="number" id="Código" required>
-                </div>
+let idParaExcluir = null;
 
-                <div class="form-group">
-                    <label for="nomeProduto">Nome do Produto</label>
-                    <input type="text" id="nomeProduto" required>
-                </div>
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("btn-delete")) {
+        idParaExcluir = e.target.dataset.id;
+        document.getElementById("modalConfirmacao").style.display = "flex";
+    }
+});
 
-                <div class="form-group">
-                    <label for="precoProduto">Preço</label>
-                    <input type="number" id="precoProduto" required>
-                </div>
+document.getElementById("btnCancelar").addEventListener("click", () => {
+    document.getElementById("modalConfirmacao").style.display = "none";
+    idParaExcluir = null;
+});
 
-                <div class="form-group">
-                    <label for="quantidadeProduto">Quantidade</label>
-                    <input type="number" id="quantidadeProduto" required>
-                </div>
+document.getElementById("btnConfirmar").addEventListener("click", async () => {
+    if (idParaExcluir) {
+        const { error } = await supabase
+            .from('produtos')
+            .delete()
+            .eq('id', idParaExcluir);
 
-                <button type="submit" class="btn btn-primary">Salvar</button>
-            </form>
-        </div>`;
+        if (error) {
+            alert("Erro ao excluir: " + error.message);
+        } else {
+            location.reload(); 
+        }
 
-    document.getElementById("modalContainer").appendChild(modalHtml);
-    modalHtml.style.display = "flex";
-}
-
-function fecharModal() {
-    let modal = document.getElementById("modal");
-    if (modal) modal.remove();
-}
+        document.getElementById("modalConfirmacao").style.display = "none";
+        idParaExcluir = null;
+    }
+});

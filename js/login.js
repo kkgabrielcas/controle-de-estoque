@@ -1,12 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
+import { supabase } from './supabaseClient.js';
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio automático do formulário
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-        let usuario = document.getElementById("usuario").value; // Captura o valor do input
-        localStorage.setItem("usuario", usuario); // Armazena no Local Storage
-        
-        window.location.href = "index.html"; // Redireciona para a página principal
-    });
+    const email = document.getElementById('usuario').value.trim();
+    const senha = document.getElementById('senha').value.trim();
+
+    const { data, error } = await supabase
+        .from('login')
+        .select('*')
+        .eq('usuario', email)
+        .eq('senha', senha)
+        .single();
+
+    if (error || !data) {
+        document.getElementById('mensagemErro').textContent = 'Usuário ou senha incorretos.';
+        console.error('Erro no login:', error);
+    } else {
+        localStorage.setItem('usuarioLogado', JSON.stringify(data));
+        window.location.href = 'main.html'; 
+    }
 });

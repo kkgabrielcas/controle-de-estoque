@@ -9,12 +9,15 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/delete.css">
+
+    <script type="module" src="js/auth.js"></script>
+
 
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/register.js"></script>
     <script type="module" src="js/pesquisa.js"></script>
-    <script type="module" src="js/excluir.js"></script>
-
+    <script type="module" src="js/delete.js"></script>
 </head>
 <body>
 
@@ -26,7 +29,7 @@
     <div class="frame"></div>
 
     <div class="exit">
-        <a href="login.html">Sair</a>
+        <a href="login.html" id="btnLogout">Sair</a>
     </div>
 
     <div id="modalContainer"></div>
@@ -61,7 +64,7 @@
         <p>Tem certeza que deseja excluir este item?</p>
         <div class="modal-botoes">
             <button id="btnConfirmar" class="btn btn-delete">Sim</button>
-            <button id="btnCancelar" class="btn">Cancelar</button>
+            <button id="btnCancelar" class="btn">Não</button>
         </div>
     </div>
 </div>

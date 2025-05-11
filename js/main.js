@@ -16,12 +16,21 @@ async function carregarProduto() {
             <td>R$${produto.preco.toFixed(2)}</td>
             <td>${produto.quantidade}</td>
             <td>
-                <button class="btn btn-delete">Excluir</button>
+                <button class="btn btn-delete" data-id="${produto.id}">Excluir</button>
                 <button class="btn btn-edit">Editar</button>
             </td>
         `;
         tbody.appendChild(tr);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnLogout = document.getElementById('btnLogout');
+    if (btnLogout) {
+        btnLogout.addEventListener('click', () => {
+            localStorage.removeItem('usuarioLogado');
+        });
+    }
+});
 
 document.addEventListener('DOMContentLoaded', carregarProduto);
