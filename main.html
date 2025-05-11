@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/register.css">
 
-    <script type="module" src="js/register.js"></script>
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/register.js"></script>
     <script type="module" src="js/pesquisa.js"></script>
+    <script type="module" src="js/excluir.js"></script>
+
 </head>
 <body>
 
@@ -47,12 +49,22 @@
                 </tr>
             </thead>
             <tbody>
-
+                
             </tbody>
         </table>    
         
         <button class="btn btn-add" onclick="abrirModal()">Cadastrar Mercadoria</button>
     </div>
+
+    <div id="modalConfirmacao" class="modal" style="display: none;">
+    <div class="modal-content">
+        <p>Tem certeza que deseja excluir este item?</p>
+        <div class="modal-botoes">
+            <button id="btnConfirmar" class="btn btn-delete">Sim</button>
+            <button id="btnCancelar" class="btn">Cancelar</button>
+        </div>
+    </div>
+</div>
 
 
 </body>
