@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/register.css">
 
-
     <script type="module" src="js/register.js"></script>
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/pesquisa,js"></script>
 </head>
 <body>
 
@@ -29,13 +29,14 @@
 
     <div id="modalContainer"></div>
 
-    <div class="pesquisa">
-        <input type="search" placeholder="Pesquisar" name ="pesquisa">
-    </div>
-
     <div class="pag">
         <h2>Mercadorias</h2>
-        <table border="1">
+
+        <div class="pesquisa">
+            <input type="search" id="searchInput" placeholder="Pesquisar" name="pesquisa">
+        </div>
+
+        <table border="1" id="tabela-mercadorias">
             <thead>
                 <tr>
                     <th>Código</th>
@@ -52,5 +53,7 @@
         
         <button class="btn btn-add" onclick="abrirModal()">Cadastrar Mercadoria</button>
     </div>
+
+
 </body>
 </html>
