@@ -43,12 +43,12 @@ body {
     font-size: 21px;
     font-weight: bold;
     z-index: 2;
-    color: rgb(185, 185, 185);
 }
 
 .Colaboradores a {
     text-decoration: none;
     text-transform: uppercase;
+    color: rgb(185, 185, 185);
 }
 
 .Colaboradores a:visited {
@@ -73,12 +73,12 @@ body {
     font-size: 21px;
     font-weight: bold;
     z-index: 2;
-    color: rgb(185, 185, 185);
 }
 
 .exit a {
     text-decoration: none;
     text-transform: uppercase;
+    color: rgb(185, 185, 185);
 }
 
 .exit a:visited {
