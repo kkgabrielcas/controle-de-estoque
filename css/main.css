@@ -17,6 +17,7 @@ body {
     gap: 15px;
 }
 
+/* CSS para montar a página  */
 .icone {
     width: 40px; 
     height: 40px;
@@ -25,13 +26,44 @@ body {
 .frame {
     width: 100%; 
     height: 75px; 
-    background-color: rgb(82, 245, 117);
+    background-color: #2e2e2e;
     position: absolute;
     top: 0%;
     left: 0%;
     z-index: 1;
 }
 
+/* CSS para o botão "Colaboradores" */
+
+.Colaboradores {
+    font-family: system-ui;
+    position: absolute;
+    top: 22px;
+    right: 120px;
+    font-size: 21px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.Colaboradores a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.Colaboradores a:visited {
+    color: rgb(185, 185, 185);
+}   
+
+.Colaboradores a:hover {
+    color: rgb(255, 249, 249);
+}
+
+.Colaboradores a:active {
+    color: rgb(185, 185, 185);
+}
+
+
+/* CSS do botão sair */
 .exit {
     font-family: system-ui;
     position: absolute;
@@ -39,14 +71,12 @@ body {
     right: 30px;
     font-size: 21px;
     font-weight: bold;
-    color: rgb(185, 185, 185);
     z-index: 2;
 }
 
 .exit a {
     text-decoration: none;
     text-transform: uppercase;
-    color: rgb(185, 185, 185);
 }
 
 .exit a:visited {
