@@ -43,6 +43,7 @@ body {
     font-size: 21px;
     font-weight: bold;
     z-index: 2;
+    color: rgb(185, 185, 185);
 }
 
 .Colaboradores a {
@@ -72,6 +73,7 @@ body {
     font-size: 21px;
     font-weight: bold;
     z-index: 2;
+    color: rgb(185, 185, 185);
 }
 
 .exit a {
