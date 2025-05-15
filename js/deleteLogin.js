@@ -17,7 +17,7 @@ document.getElementById("btnCancelar").addEventListener("click", () => {
 document.getElementById("btnConfirmar").addEventListener("click", async () => {
     if (idParaExcluir) {
         const { error } = await supabase
-            .from('produtos')
+            .from('login')
             .delete()
             .eq('id', idParaExcluir);
 

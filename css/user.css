@@ -17,7 +17,6 @@ body {
     gap: 15px;
 }
 
-/* CSS para montar a página  */
 .icone {
     width: 40px; 
     height: 40px;
@@ -33,9 +32,7 @@ body {
     z-index: 1;
 }
 
-/* CSS para o botão "Colaboradores" */
-
-.Colaboradores {
+.Mercadorias {
     font-family: system-ui;
     position: absolute;
     top: 22px;
@@ -43,54 +40,6 @@ body {
     font-size: 21px;
     font-weight: bold;
     z-index: 2;
-}
-
-.Colaboradores a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(185, 185, 185);
-}
-
-.Colaboradores a:visited {
-    color: rgb(185, 185, 185);
-}   
-
-.Colaboradores a:hover {
-    color: rgb(255, 249, 249);
-}
-
-.Colaboradores a:active {
-    color: rgb(185, 185, 185);
-}
-
-
-/* CSS do botão sair */
-.exit {
-    font-family: system-ui;
-    position: absolute;
-    top: 22px;
-    right: 30px;
-    font-size: 21px;
-    font-weight: bold;
-    z-index: 2;
-}
-
-.exit a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(185, 185, 185);
-}
-
-.exit a:visited {
-    color: rgb(185, 185, 185);
-}
-
-.exit a:hover {
-    color: rgb(255, 249, 249);
-}
-
-.exit a:active {
-    color: rgb(185, 185, 185);
 }
 
 .pag {
@@ -160,4 +109,51 @@ th {
     box-sizing: border-box;
     font-size: 16px;
     margin-bottom: 15px;
+}
+
+
+.exit {
+    font-family: system-ui;
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    font-size: 21px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.exit a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(185, 185, 185);
+}
+
+.exit a:visited {
+    color: rgb(185, 185, 185);
+}
+
+.exit a:hover {
+    color: rgb(255, 249, 249);
+}
+
+.exit a:active {
+    color: rgb(185, 185, 185);
+}
+
+.Mercadorias a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(185, 185, 185);
+}
+
+.Mercadorias a:visited {
+    color: rgb(185, 185, 185);
+}   
+
+.Mercadorias a:hover {
+    color: rgb(255, 249, 249);
+}
+
+.Mercadorias a:active {
+    color: rgb(185, 185, 185);
 }

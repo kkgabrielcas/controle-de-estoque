@@ -8,30 +8,42 @@
     <title>Controle de Estoque</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/delete.css">
     <link rel="stylesheet" href="css/register.css">
 
+    <script type="module" src="js/auth.js"></script>
 
-    <script type="module" src="js/register.js"></script>
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/register.js"></script>
+    <script type="module" src="js/pesquisa.js"></script>
+    <script type="module" src="js/delete.js"></script>
 </head>
 <body>
-
     <div class="titulo">
         <img src="img/icon.png" alt="Ícone Estoque" class="icone">
-        CONTROLE DE ESTOQUE
+        Controle de Estoque
     </div>
 
     <div class="frame"></div>
 
     <div class="exit">
-        <a href="login.html">Sair</a>
+        <a href="login.html" id="btnLogout">Sair</a>
+    </div>
+
+    <div class = "Colaboradores">
+            <a href = "users.html">Colaboradores</a>
     </div>
 
     <div id="modalContainer"></div>
 
     <div class="pag">
         <h2>Mercadorias</h2>
-        <table border="1">
+
+        <div class="pesquisa">
+            <input type="search" id="searchInput" placeholder="Pesquisar" name="pesquisa">
+        </div>
+
+        <table border="1" id="tabela-mercadorias">
             <thead>
                 <tr>
                     <th>Código</th>
@@ -42,11 +54,23 @@
                 </tr>
             </thead>
             <tbody>
-
+                
             </tbody>
         </table>    
         
         <button class="btn btn-add" onclick="abrirModal()">Cadastrar Mercadoria</button>
     </div>
+
+    <div id="modalConfirmacao" class="modal" style="display: none;">
+    <div class="modal-content">
+        <p>Tem certeza que deseja excluir este item?</p>
+        <div class="modal-botoes">
+            <button id="btnConfirmar" class="btn btn-confirmar">Sim</button>
+            <button id="btnCancelar" class="btn btn-negar">Não</button>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

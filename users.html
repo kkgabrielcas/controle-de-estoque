@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboradores</title>
+
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/delete.css">
+
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src= "js/user.js"></script> 
+    <script type="module" src= "js/registerWorker.js"></script> 
+    <script type="module" src= "js/deleteLogin.js"></script>
+</head>
+<body>
+    <div class="titulo">
+        <img src="img/icon.png" alt="Ícone Estoque" class="icone">
+        Controle de Estoque
+    </div>
+
+    <div class="frame"></div>
+
+    <div class="exit">
+        <a href="login.html" id="btnLogout">Sair</a>
+    </div>
+
+    <div class = "Mercadorias">
+            <a href = "main.html">Mercadorias</a>
+    </div>
+
+    <div id="modalContainer"></div>
+
+    <div class="pag">
+        <h2>Colaboradores</h2>
+
+        <div class="pesquisa">
+            <input type="search" id="searchInput" placeholder="Pesquisar" name="pesquisa">
+        </div>
+
+        <table border="1" id="tabela-mercadorias">
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Senha</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>   
+
+        <button class="btn btn-add" onclick="abrirModal()">Cadastrar Colaborador</button>
+    </div>
+
+
+</div>
+</body>
+</html>

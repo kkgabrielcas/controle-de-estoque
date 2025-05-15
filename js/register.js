@@ -58,6 +58,10 @@ function fecharModal() {
     if (modal) modal.remove();
 }
 
+function carregarProduto() {
+    location.reload();
+}
+
 async function salvarProduto(event) {
     event.preventDefault(); 
 
@@ -88,3 +92,4 @@ async function salvarProduto(event) {
 
 window.fecharModal = fecharModal;
 window.abrirModal = abrirModal;
+window.carregarProduto = carregarProduto;
