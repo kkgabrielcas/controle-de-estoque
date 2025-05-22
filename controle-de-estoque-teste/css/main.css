@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background-color: rgb(230, 229, 229);
+    height: 100vh;
+}
+
+.titulo {
+    font-family: system-ui;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    display: flex;
+    gap: 15px;
+}
+
+/* CSS para montar a página  */
+.icone {
+    width: 40px; 
+    height: 40px;
+}
+
+.frame {
+    width: 100%; 
+    height: 75px; 
+    background-color: #2e2e2e;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+}
+
+/* CSS para o botão "Colaboradores" */
+
+.Colaboradores {
+    font-family: system-ui;
+    position: absolute;
+    top: 22px;
+    right: 120px;
+    font-size: 21px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.Colaboradores a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(185, 185, 185);
+}
+
+.Colaboradores a:visited {
+    color: rgb(185, 185, 185);
+}   
+
+.Colaboradores a:hover {
+    color: rgb(255, 249, 249);
+}
+
+.Colaboradores a:active {
+    color: rgb(185, 185, 185);
+}
+
+
+/* CSS do botão sair */
+.exit {
+    font-family: system-ui;
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    font-size: 21px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.exit a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(185, 185, 185);
+}
+
+.exit a:visited {
+    color: rgb(185, 185, 185);
+}
+
+.exit a:hover {
+    color: rgb(255, 249, 249);
+}
+
+.exit a:active {
+    color: rgb(185, 185, 185);
+}
+
+.pag {
+    font-family: system-ui;
+    margin: 100px auto;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: system-ui;
+    color: rgb(39, 39, 39);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: rgb(39, 39, 39);
+    color: white;
+}
+
+.btn {
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-edit {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-add {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    width: fit-content;
+}
+
+.pesquisa input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
