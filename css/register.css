@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 .modal {
-  font-family: system-ui;
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,15 +19,15 @@
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  width: 40%; 
+  max-width: 800px;
+  width: 60%; 
   text-align: center;
   display: flex;
-  flex-direction: column; 
-  gap: 10px; 
+  flex-direction: column;
+  gap: 10px;
 }
-
 .modal-content button {
-  font-family: system-ui;
+  font-family: "Poppins", sans-serif;
   margin-top: 20px; 
   margin-bottom: 3px; 
   padding: 10px 20px;  

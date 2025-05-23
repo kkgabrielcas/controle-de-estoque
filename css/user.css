@@ -5,7 +5,7 @@ body {
 }
 
 .titulo {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     position: absolute;
     top: 20px;
     left: 100px;
@@ -33,7 +33,7 @@ body {
 }
 
 .Mercadorias {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     position: absolute;
     top: 22px;
     right: 120px;
@@ -43,7 +43,7 @@ body {
 }
 
 .pag {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     margin: 100px auto;
     width: 80%;
     max-width: 1200px;
@@ -54,7 +54,7 @@ body {
 }
 
 h2 {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     color: rgb(39, 39, 39);
 }
 
@@ -113,7 +113,7 @@ th {
 
 
 .exit {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     position: absolute;
     top: 22px;
     right: 30px;

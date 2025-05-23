@@ -20,7 +20,7 @@ async function carregarLogin() {
             <td>${login.usuario}</td>
             <td>${login.senha}</td>
             <td>
-                <button class="btn btn-delete" data-id="${produto.id}">Excluir</button>
+                <button class="btn btn-delete" data-id="${login.id}">Excluir</button>
                 <button class="btn btn-edit">Editar</button>
             </td>
         `;
