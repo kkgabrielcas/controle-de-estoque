@@ -1,4 +1,4 @@
-.login {
+.cadastro {
   position: relative;
   z-index: 1;
   background: rgba(255, 255, 255, 0.9);
@@ -10,18 +10,18 @@
   width: 100%;
 }
 
-.login .icone {
+.cadastro .icone {
   width: 60px;
   margin-bottom: 15px;
 }
 
-.login h2 {
+.cadastro h2 {
   margin-bottom: 20px;
   font-weight: 600;
   color: #333;
 }
 
-.login input {
+.cadastro input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -30,7 +30,7 @@
   background: #f0f0f0;
 }
 
-.login button {
+.cadastro button {
   width: 100%;
   padding: 12px;
   background-color: #4973ff;
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 
-.login button:hover {
+.cadastro button:hover {
   background-color: #3655d3;
 }
 

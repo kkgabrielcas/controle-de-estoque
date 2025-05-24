@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: rgb(230, 229, 229);
     height: 100vh;
+    font-family: "Poppins", sans-serif;
 }
 
 .titulo {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     position: absolute;
     top: 20px;
     left: 100px;
@@ -36,7 +41,7 @@ body {
 /* CSS para o botão "Colaboradores" */
 
 .Colaboradores {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     position: absolute;
     top: 22px;
     right: 120px;
@@ -66,7 +71,7 @@ body {
 
 /* CSS do botão sair */
 .exit {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     position: absolute;
     top: 22px;
     right: 30px;
@@ -94,7 +99,7 @@ body {
 }
 
 .pag {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     margin: 100px auto;
     width: 80%;
     max-width: 1200px;
@@ -105,7 +110,7 @@ body {
 }
 
 h2 {
-    font-family: system-ui;
+    font-family: "Poppins", sans-serif;
     color: rgb(39, 39, 39);
 }
 
